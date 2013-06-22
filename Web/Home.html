@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link type="text/css" href="css/bootstrap.css" rel="stylesheet" media="screen">
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.1.min.js"></script>
+  </head>
   </head>
   <body>
-	<div class="container">
-		<div class="navbar">
+  
+		<!-- Navbar part -->
+	
+		<div class="navbar navbar-inverse">
 			<div class="navbar-inner ">
-			
+			<div id="navid" class="container">
 				<a class=" brand pull-left">
 					<p>WSN Lab Project (Summer Semester 2013)</p>
 				</a>
@@ -19,7 +23,7 @@
 					<ul class="nav">
 						<li class="active"><a href="#"><i class="icon-home"></i> Home</a></li>
 						<li><a href="#">Learn</a></li>
-						<li><a href="#"><i class="icon-envelope"></i> Contact</a></li>
+						<li><a href="#"><i class="icon-envelope icon-white"></i> Contact</a></li>
 						<li><a href="login.html">Logout</a></li>
 					</ul>
 				</div>
@@ -27,13 +31,13 @@
 		</div>
 	</div>
 	
-	
+		<!-- Image part -->
 	<div class=" container">
 		<div class="row-fluid">
 			<div class="pagination ">
 			  <ul class=" inline text-center">
 				<li><a href="#">Prev</a></li>
-				<li><a href="#"><img src="1.jpg" width="140" height="140"></img><br>G1</a></li>
+				<li><a id="img1" href="#"><img src="1.jpg" width="140" height="140"></img><br>G1</a></li>
 				<li><a href="#"><img src="1.jpg" width="140" height="140"></img><br>G2</a></li>
 				<li><a href="#"><img src="1.jpg" width="140" height="140"></img><br>G3</a></li>
 				<li><a href="#"><img src="1.jpg" width="140" height="140"></img><br>G4</a></li>
@@ -43,8 +47,9 @@
 			</div>
 		</div>
 	</div>
-	
-	<div class="container ">
+
+	<!-- Function part -->
+	<div id="funccon" class="container " >
 		<div class=" row-fluid text-center">
 			<div class="well span4 ">
 				<div class="">
@@ -53,7 +58,7 @@
 				</div>
 				<div class="">
 					<div class="nav ">
-						<ul class="btn-group btn-group-vertical span12">
+						<ul id="ul1"class="btn-group btn-group-vertical span12 disabled">
 							<a class="btn btn">Config 1</a>
 							<a class="btn btn">Config 2</a>
 							<a class="btn btn">Config 3</a>
@@ -68,7 +73,7 @@
 				</div>
 				<div class="">
 					<div class="nav ">
-						<ul class="btn-group btn-group-vertical span12">
+						<ul id="ul2"class="btn-group btn-group-vertical span12 disabled">
 							<a class="btn btn">Vis 1</a>
 							<a class="btn btn">Vis 2</a>
 							<a class="btn btn">Vis 3</a>
@@ -83,8 +88,8 @@
 				</div>
 				<div class="">
 					<div class="nav ">
-						<ul class="btn-group btn-group-vertical span12">
-							<a class="btn btn">Test 1</a>
+						<ul id="ul3"class="btn-group btn-group-vertical span12 disabled">
+							<a id="btntest1"class="btn btn">Test 1</a>
 							<a class="btn btn">Test 2</a>
 							<a class="btn btn">Test 3</a>
 						</ul>
@@ -94,9 +99,15 @@
 		</div>
 	</div>
 
+	<script>
+
+		$("#img1").click(function(){
+			$("#ul1").toggleClass("disabled");
+			$("#ul2").toggleClass("disabled");
+			$("#ul3").toggleClass("disabled");
+		});
+	</script>
 	
-	
-	<script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
   </body>
 </html>

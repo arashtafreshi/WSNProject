@@ -5,29 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.1.min.js"></script>
   </head>
   <body>
 	
 		<h1 class="well text-center">WSN Lab Project</h1>
 		<div class="container">
 			<form class="well span3 offset4">
-				<div id="error" class="alert alert-error hide">
+				<div  id="error" class="alert alert-error hide">
 					invalid Username or Password! <br>Please try again.</br>
 				</div>
-				<label>Username:</label>
+				<label >Username:</label>
 				<input type="text"/></br>
 				<label>Password:</label>
 				<input type="password"/></br>
-				<a class="btn btn-primary btn-large"  href="home.html">Login</a><br></br>
-				<p><a href="#">Register</a> | <a href="#">Forget your password?</a></p>
+				<a id="btnlogin" href="home.html" class="btn btn-primary btn-large"  type="button">Login</a><br></br>
+				<p><a id="btnreg" href="#">Register</a> | <a href="#">Forget your password?</a></p>
 			</form>
 		</div>
 
 	
-	
+	<script>
+		
+		$("#btnreg").click(function () {
+			// body...
+			$("#error").toggle("slow");
+			});
+
+	</script>
 
 
-	<script src="http://code.jquery.com/jquery.js"></script>
+
     <script src="js/bootstrap.js"></script>
   </body>
 </html>

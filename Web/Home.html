@@ -29,6 +29,18 @@
 		<!-- for Font-Awsom-->
 		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
+		<!--Jquery UI Bootstrap-->
+		<link rel="stylesheet" href="css/custom-theme/jquery.ui.1.9.2.ie.css">
+		<link rel="stylesheet" href="css/custom-theme/jquery.ui.1.10.0.ie.css">
+		<link rel="stylesheet" href="css/custom-theme/jquery-ui-1.9.2.custom.css">
+		<link rel="stylesheet" href="css/custom-theme/jquery-ui-1.10.0.custom.css">
+
+		<!--Slider-->
+		
+		<link rel="stylesheet" href="slider/css/slider.css">	
+		<script language="javascript" src="slider/js/bootstrap-slider.js" ></script>	
+
+
 
 </head>
 <body>
@@ -39,7 +51,7 @@
 		<div id="navbar" class="navbar-inner ">
 			<div id="navid" class="container">
 				<a class=" brand pull-left">
-					<p>WSN Lab Project (Summer Semester 2013)</p>
+					<p><i class="icon-leaf"></i>  WSN Lab Project (Summer Semester 2013)</p>
 				</a>
 
 				<div class="pull-right ">	
@@ -226,9 +238,28 @@
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				<h3 id="myModalLabel">Neighbours Graph</h3>
+
 			</div>
 			<div class="modal-body">
-				<p>Lets have a graph here</p>
+				<label>Choose RSSI</label>
+				<input type="text" id="amount" placeholder="Defualt RSSI is 20">
+				<input type="text" id="v-slider">
+				<script>
+					// slider
+					//slider does not work well now, I want to change the data in textbox while changing slider!!!!
+				    $("#h-slider").slider({
+						    orientation: "vertical",
+						    range: "min",
+						    min: 0,
+						    max: 100,
+						    value: 60,
+						    slide: function (event, ui) {
+						    $("#amount").val(ui.value);
+						    }
+						    });
+						    $("#amount").val($("#v-slider").slider("value"));
+					
+				</script>
 				<canvas id="viewport" width="500" height="300"></canvas>
 				<script language="javascript" type="text/javascript">
 					var sys = arbor.ParticleSystem(1000, 400,1);
@@ -317,7 +348,8 @@
 				new_row="<tr><td>Matteo</td><td>3</td></tr>";
 				$("#table1").append(new_row);
 			});
-		}); 
+
+			 
 		//document.getElementById("area1").innerHTML="Hello World";
 		//alert("My First JavaScript");
 		

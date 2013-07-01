@@ -1,57 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title class="text-center">Home</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Bootstrap -->
-	<link type="text/css" href="css/bootstrap.css" rel="stylesheet" media="screen">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-
-	<!-- I am not sure whether we need all or not-->
-	
+  <head>
+    <title class="text-center">Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link type="text/css" href="css/bootstrap.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet" media="screen">
+    <link type="text/css" href="css/slider.css" rel="stylesheet" >
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 	<script language="javascript" type="text/javascript" src="arbor/lib/arbor.js" ></script>
 	<script language="javascript" type="text/javascript" src="arbor/demos/_/graphics.js" ></script>
 	<script language="javascript" type="text/javascript" src="arbor/demos/halfviz/src/renderer.js" ></script>
-
-	<link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel='stylesheet' />
-	<link href="assets/css/style.css" rel="stylesheet" />
-	<script src="assets/js/jquery.knob.js"></script>
-
-		<!-- jQuery File Upload Dependencies -->
-		<script src="assets/js/jquery.ui.widget.js"></script>
-		<script src="assets/js/jquery.iframe-transport.js"></script>
-		<script src="assets/js/jquery.fileupload.js"></script>
-		
-		<!-- Our main JS file -->
-		<script src="assets/js/script.js"></script>
-
-		<!-- for Font-Awsom-->
-		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-
-		<!--Jquery UI Bootstrap-->
-		<link rel="stylesheet" href="css/custom-theme/jquery.ui.1.9.2.ie.css">
-		<link rel="stylesheet" href="css/custom-theme/jquery.ui.1.10.0.ie.css">
-		<link rel="stylesheet" href="css/custom-theme/jquery-ui-1.9.2.custom.css">
-		<link rel="stylesheet" href="css/custom-theme/jquery-ui-1.10.0.custom.css">
-
-		<!--Slider-->
-		
-		<link rel="stylesheet" href="slider/css/slider.css">	
-		<script language="javascript" src="slider/js/bootstrap-slider.js" ></script>	
-
-
-
-</head>
-<body>
-
-	<!-- Navbar part -->
+	<link rel="stylesheet" href="/resources/demos/style.css" />
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  </head>
+  <body>
+  
+		<!-- Navbar part -->
 	
-	<div  class="navbar navbar-inverse">
-		<div id="navbar" class="navbar-inner ">
+		<div  class="navbar navbar-inverse">
+			<div id="navbar" class="navbar-inner ">
 			<div id="navid" class="container">
 				<a class=" brand pull-left">
-					<p><i class="icon-leaf"></i>  WSN Lab Project (Summer Semester 2013)</p>
+					<p>WSN Lab Project (Summer Semester 2013)</p>
 				</a>
 
 				<div class="pull-right ">	
@@ -66,22 +40,22 @@
 		</div>
 	</div>
 	
-	<!-- Image part -->
-	<div class="container-fluid ">
+		<!-- Image part -->
+	<div class="container container-fluid ">
 		<div class="row-fluid">
-			<div class="span4"></div>
-			<div class="pagination">
-				<ul class=" inline text-center">
-					<li><a href="#">Prev</a></li>
-					<li><a id="img1" href="#"><img src="img/1.jpg" width="140" height="140"></img><br>G1</a></li>
-					<li><a id="img2" href="#"><img src="img/2.JPG" width="140" height="140"></img><br>G2</a></li>
-					<li><a href="#"><img src="img/3.JPG" width="140" height="140"></img><br>G3</a></li>
-					<li><a href="#"><img src="img/4.JPG" width="140" height="140"></img><br>G4</a></li>
-					<li><a href="#"><img src="img/5.JPG" width="140" height="140"></img><br>G5</a></li>
-					<li><a href="#">Next</a></li>
-				</ul>
-			</div>
-
+			
+				<div class="pagination ">
+				  <ul class=" inline text-center">
+					<li class="span1"><a  href="#">Prev</a></li>
+					<li class="span2"><a  id="img1" href="#"><img src="img/1.jpg" ></img><br>G1</a></li>
+					<li class="span2"><a  href="#"><img src="img/2.JPG" ></img><br>G2</a></li>
+					<li class="span2"><a  href="#"><img src="img/3.JPG" ></img><br>G3</a></li>
+					<li class="span2"><a  href="#"><img src="img/4.JPG" ></img><br>G4</a></li>
+					<li class="span2"><a  href="#"><img src="img/5.JPG" ></img><br>G5</a></li>
+					<li class="span1"><a  href="#">Next</a></li>
+				  </ul>
+				</div>
+		
 
 		</div>
 	</div>
@@ -89,81 +63,107 @@
 
 	<!-- Big Image part -->
 
-	<div id="bigImgCon"class="container-fluid well hide">
+	<div id="bigImgCon" class="container container-fluid well hide">
 		<div class="row-fluid">
 
-			
-			
 			<div class="span8">
 				<!-- Image only   <img id="bigpic" src="1.jpg" class="pull-right"></img>-->
-
-				<div id="myCarousel" class="carousel slide" data-interval=false>	<!-- Carousel -->
-					<ol class="carousel-indicators">
-						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-						<li data-target="#myCarousel" data-slide-to="1"></li>
-						<li data-target="#myCarousel" data-slide-to="2"></li>
-					</ol>
-					<!-- Carousel items -->
-					<div class="carousel-inner">
-						<div class="active item"><img src="img/1.jpg" usemap="#moteclick"></img></div>
-						<div class="item"><img src="img/1-l.jpg"></img></div>
-						<div class="item"><img src="img/1-r.jpg"></img></div>
-					</div>
-					<!--Map Part for click on picture-->
-					<!--Use <area coords="x,y,radius">  -->
-					<map name="moteclick">
-						<area id="area1" shape="circle" coords="150,250,100" href="#">
-						<area id="area2" shape="circle" coords="450,250,100" href="#">
-						<area id="area3" shape="circle" coords="750,250,100" href="#">
-					</map>
-
-					<!-- Carousel nav -->
-					<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-					<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+			    <div id="myCarousel" class="carousel slide" data-interval=false>	<!-- Carousel -->
+				    <ol class="carousel-indicators">
+					    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					    <li data-target="#myCarousel" data-slide-to="1"></li>
+					    <li data-target="#myCarousel" data-slide-to="2"></li>
+				    </ol>
+				    <!-- Carousel items -->
+				    <div class="carousel-inner">
+					    <div class="active item"><img id="bigimg1" src="img/1.jpg" usemap="#motesPosition"></img></div>
+					    <div class="item"><img src="img/1-l.jpg"></img></div>
+					    <div class="item"><img src="img/1-r.jpg"></img></div>
+				    </div>
+				    <!-- Carousel nav -->
+				    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+				    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 				</div>
-
 			</div>
+
+			<map name="motesPosition">
+				<area id="area1" class="area" shape="rect" coords=""  href="#" data-IDtoToggle="0">
+				<area id="area2" class="area" shape="rect" coords=""  href="#" data-IDtoToggle="1">
+				<area id="area3" class="area" shape="rect" coords=""  href="#" data-IDtoToggle="2">
+			</map>
 
 			<div class="span4 well">
 				<h4>Option:</h4>
 				<label class="radio">
 					<input type="radio" name="optionsRadio" checked>
-					Select all motes
+						Select all motes
 				</label>
 				<label class="radio">
 					<input type="radio" name="optionsRadio">
-					Select multiple motes
+						Select multiple motes
 				</label>
 
-				<table id="table1" class="table table-bordered">
-					<tr>
-						<th>Name</th>
-						<th>ID</th>
+				<table class="table table-bordered table striped table-hover">
+					<thead class="well">
+						<tr>
+							<th>ID</th>
+							<th>Name</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody id="tblBody">
+						<tr class="hide mote0">
+							<td>0</td>
+							<td>Amy</td>
+							<td></td>
+						</tr>
+						<tr class="hide mote1">
+							<td>1</td>
+							<td>Stuart</td>
+							<td></td>
+						</tr>
+						<tr class="hide mote2">
+							<td>2</td>
+							<td>Barry</td>
+							<td></td>
+						</tr>
+						<tr class="hide mote3">
+							<td>3</td>
+							<td>Arash</td>
+							<td></td>
+						</tr>
+						<tr class="hide mote4">
+							<td>4</td>
+							<td>Peyman</td>
+							<td></td>
+						</tr>
+						<tr class="hide mote5">
+							<td>5</td>
+							<td>Matteo</td>
+							<td></td>
+						</tr>
+					</tbody>
 
-					</table>
-
-
-				</div>
-
+				</table>
 			</div>
-		</div>
-		<hr>
+	</div>
+</div>
+	<hr>
 
 
-		<!-- Function part -->
-
+	<!-- Function part -->
+<div class="container">
 		<div id="funcCon" class=" row-fluid text-center">
 			<div class="well span4 ">
 				<div class="">
 					<i class=" icon-cogs icon-4x " ></i>
 					<h1>Configuration</h1>
-
 				</div>
 				<hr>
 				<div class="">
 					<div class="nav ">
 						<ul id="ul1"class="btn-group btn-group-vertical span12   ">
-							<a href="#myModal2" role="button" class="btn" data-toggle="modal">Flash</a>
+							<a class="btn  btnselector disabled">Flash</a>
 							<a class="btn  btnselector disabled">Start SF</a>
 							<a class="btn  btnselector disabled">Stop SF</a>
 						</ul>
@@ -172,15 +172,14 @@
 			</div>
 			<div class="well span4 ">
 				<div class="">
-					<i class=" icon-eye-open  icon-4x " ></i>
-					<h1>Visualization</h1>
+				<i class=" icon-eye-open  icon-4x " ></i>
+				<h1>Visualization</h1>
 				</div>
 				<hr>
 				<div class="">
 					<div class="nav ">
 						<ul id="ul2"class="btn-group btn-group-vertical span12   ">
-							<!-- Button to trigger modal -->
-							<a href="#myModal1" role="button" class="btn" data-toggle="modal">Show Neighbors</a>
+							<a class="btn  btnselector disabled">Neighbors Graph</a>
 							<a class="btn  btnselector disabled">Vis 2</a>
 							<a class="btn  btnselector disabled">Vis 3</a>
 						</ul>
@@ -189,8 +188,8 @@
 			</div>
 			<div class="well span4 ">
 				<div class="">
-					<i class="icon-beaker icon-4x"></i>
-					<h1>Test Obtions</h1>
+				<i class="icon-beaker icon-4x"></i>
+				<h1>Test</h1>
 				</div>
 				<hr>
 				<div class="">
@@ -204,158 +203,42 @@
 				</div>
 			</div>
 		</div>
+	</div>
+	
+
+	<!-- Modal -->
+
+	<div id="modalTest" class="modal hide fade">
+	    <div class="modal-header">
+	    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	    	<h3 id="modalHeadreText">Test 1:</h3>
+	    </div>
+	    <div class="modal-body modalBody">
+	    	<p>Amy (0):</p>
+	    	<div class="progress progress-striped active">
+	    		<div class="bar" style="width:40%;"></div>
+	    	</div><hr>
+	    		<p>Stuart (1):</p>
+	    	<div class="progress progress-striped active">
+	    		<div class="bar" style="width:15%;"></div>
+	    	</div><hr>
+	    		<p>Barry (3):</p>
+	    	<div class="progress progress-striped active">
+	    		<div class="bar bar-danger" style="width:67%;"></div>
+	    	</div><hr>
+	    </div>
+	    <div class="modal-footer">
+		    <button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Cancel</button>
+		    <button class="btn btn-success" data-dismiss="modal" aria-hidden="true">Done</button>
+	    </div>
+    </div>
 
 
-		<!-- Modal -->
+<!-- Script -->
 
-		<div id="modalTest" class="modal hide fade">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h3 id="modalHeadreText">Test 1:</h3>
-			</div>
-			<div class="modal-body">
-				<p>Amy (0):</p>
-				<div class="progress progress-striped active">
-					<div class="bar" style="width:40%;"></div>
-				</div><hr>
-				<p>Stuart (1):</p>
-				<div class="progress progress-striped active">
-					<div class="bar" style="width:15%;"></div>
-				</div><hr>
-				<p>Barry (3):</p>
-				<div class="progress progress-striped active">
-					<div class="bar bar-danger" style="width:67%;"></div>
-				</div><hr>
-			</div>
-			<div class="modal-footer">
-				<button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Cancel</button>
-				<button class="btn btn-success" data-dismiss="modal" aria-hidden="true">Done</button>
-			</div>
-		</div>
+	<script src="jquery-ui-1.10.3.custom.js"></script>
+	<script src="web.js"></script>
 
-		<!-- Modal 1-->
-		<div id="myModal1" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h3 id="myModalLabel">Neighbours Graph</h3>
-
-			</div>
-			<div class="modal-body">
-				<label>Choose RSSI</label>
-				<input type="text" id="amount" placeholder="Defualt RSSI is 20">
-				<input type="text" id="v-slider">
-				<script>
-					// slider
-					//slider does not work well now, I want to change the data in textbox while changing slider!!!!
-				    $("#h-slider").slider({
-						    orientation: "vertical",
-						    range: "min",
-						    min: 0,
-						    max: 100,
-						    value: 60,
-						    slide: function (event, ui) {
-						    $("#amount").val(ui.value);
-						    }
-						    });
-						    $("#amount").val($("#v-slider").slider("value"));
-					
-				</script>
-				<canvas id="viewport" width="500" height="300"></canvas>
-				<script language="javascript" type="text/javascript">
-					var sys = arbor.ParticleSystem(1000, 400,1);
-					sys.parameters({gravity:true});
-					sys.renderer = Renderer("#viewport") ;
-					var Peyman = sys.addNode('Peyman',{'color':'red','shape':'dot','label':'Peyman'});
-					var Arash = sys.addNode('Arash',{'color':'blue','shape':'dot','label':'Arash'});
-					var Matteo = sys.addNode('Matteo',{'color':'green','shape':'dot','label':'Matteo'});
-
-					sys.addEdge(Peyman, Arash);
-					sys.addEdge(Arash, Matteo);
-
-				</script>
-			</div>
-			<div class="modal-footer">
-				<button class="btn btn-success" data-dismiss="modal" aria-hidden="true">Done</button>
-				
-			</div>
-		</div>
-
-		<!-- Modal 2-->
-		<div id="myModal2" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h3 id="myModalLabel">Flash Selected Motes</h3>
-			</div>
-			<div class="modal-body">
-				<form id="upload" method="post" action="upload.php" enctype="multipart/form-data">
-					<div id="drop">
-						Drop Here
-
-						<a>Browse</a>
-						<input type="file" name="upl" multiple />
-					</div>
-
-					<ul>
-						<!-- The file uploads will be shown here -->
-					</ul>
-
-					</form>
-					</div>
-			<div class="modal-footer">
-				<button class="btn btn-success" data-dismiss="modal" aria-hidden="true">Done</button>
-				
-			</div>
-		</div>
-
-		<!-- Script -->
-
-		<script>
-		$("#bigImgCon").css("background-color","#BBBDBF");
-		$("body").css("background-color","#E9EDF5");
-		$("#img1").click(function(){
-
-			$("#bigImgCon").slideToggle("slow");
-			$(".btnselector").toggleClass("disabled");
-		});
-		$("#img2").click(function(){
-
-			$("#bigImgCon").slideToggle("slow");
-			$(".btnselector").toggleClass("disabled");
-		});
-		$(".btnselector").click(function(){
-
-			if (!($(this).hasClass("disabled"))) {
-				$("#modalHeadreText").text($(this).text()+":");
-				$("#modalTest").modal("toggle");
-			};
-		});
-
-		
-		$(document).ready(function(){
-
-			$("#area1").click(function(){
-				new_row="<tr><td>Peyman</td><td>1</td></tr>";
-				$("#table1").append(new_row);
-				$("#table1").parent().remove(new_row);
-			});
-
-			$("#area2").click(function(){
-				new_row="<tr><td>Arash</td><td>2</td></tr>";
-				$("#table1").append(new_row);
-			});
-
-			$("#area3").click(function(){
-				new_row="<tr><td>Matteo</td><td>3</td></tr>";
-				$("#table1").append(new_row);
-			});
-
-			 
-		//document.getElementById("area1").innerHTML="Hello World";
-		//alert("My First JavaScript");
-		
-
-
-		</script>
-		<script src="js/bootstrap.js"></script>
-	</body>
-	</html>
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>
